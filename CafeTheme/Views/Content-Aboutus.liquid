@@ -1,0 +1,32 @@
+{% if Model.ContentItem.Content.Aboutus == nil %}
+
+{% assign my_content = Content["slug:aboutus"].Content %}
+
+{% else %}
+
+{% assign my_content = Model.ContentItem.Content %}
+
+{% endif %}
+
+<section class="page-section about-heading">
+  <div class="container">
+    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="{{ my_content.Aboutus.AboutUsImage.Paths.first | asset_url }}" alt="{{ my_content.Aboutus.Title }}"/>
+    <div class="about-heading-content">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="bg-faded rounded p-5">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper"> {{ my_content.Aboutus.Slogan.Text }} </span>
+              <span class="section-heading-lower">{{ my_content.Aboutus.SubSlogan.Text }}</span>
+            </h2>
+            {{ my_content.HtmlBodyPart.Html | raw }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
