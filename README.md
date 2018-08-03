@@ -1,5 +1,5 @@
 # OrchardTheme
 OrchardCore Theming playground
 
-## Coffee Theme
+## Cafe Theme
 Already fully transformed and ready to use
