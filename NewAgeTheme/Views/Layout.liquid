@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>New Age - Start Bootstrap Theme</title>
+    <title>{{ Site.SiteName }}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="NewAgeTheme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +26,11 @@
     <!-- Custom styles for this template -->
     <link href="NewAgeTheme/css/new-age.min.css" rel="stylesheet">
 
+	{% resources type: "Meta" %}
+    {% resources type: "HeadLink" %}
+    {% resources type: "Stylesheet" %}
+    {% resources type: "HeadScript" %}
+
   </head>
 
   <body>
@@ -39,7 +44,7 @@
           <i class="fa fa-bars"></i>
         </button>
         
-		{% shape "menu", alias: "alias:main-menu2" %}
+		{% shape "menu", alias: "alias:main-menu3" %}
 
       </div>
     </nav>
