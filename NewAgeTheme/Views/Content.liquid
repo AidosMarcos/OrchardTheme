@@ -14,7 +14,7 @@
       </div>
       <div class="col-lg-5 my-auto">
                 <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                <img src="{{ home.Content.BagPart.ContentItems.first.Product.ProdImage.Paths.first | asset_url }}" class="img-fluid" alt="" />
+                <img src="{{ home.Content.BagPart.ContentItems.first.Product.ProdImage.Paths.first | asset_url | resize_url: width:500, height:430, mode:'crop' }}" class="" alt="" />
                   </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
             {% for prod in products.Content.BagPart.ContentItems %}
             <div class="col-lg-4">
               <div class="feature-item">
-                <img class="prod-img" src="{{ prod.Product.ProdImage.Paths.first | asset_url | resize_url: 240, 240, boxpad }}"></img>
+                <img  src="{{ prod.Product.ProdImage.Paths.first | asset_url | resize_url: width:350, height:320, mode:'crop' }}"></img>
                 <h3>{{ prod.TitlePart.Title }}</h3>
                 <p class="text-muted">{{ prod.Product.ProdSubTitle.Text }}</p>
               </div>
