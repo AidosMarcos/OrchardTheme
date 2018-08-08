@@ -7,6 +7,7 @@ Both teams were downloaded from https://startbootstrap.com/ "Free Themes" sectio
 
 ### Login for backoffice access
 username: admin 
+
 password: P@ssw0rd!!
 
 ## Cafe Theme (Multipage website example)
